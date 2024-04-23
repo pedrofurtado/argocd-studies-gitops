@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- deployment.yaml
+- service.yaml
+
+images:
+- name: argocd-studies-goapp
+  newName: pedrofurtado/argocd-studies-app
+  newTag: bc245dba06f52647a39933d224e816a1d95f76eb
